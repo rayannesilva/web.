@@ -11,7 +11,7 @@ app.use(over('_method', {methods:['GET', 'POST', 'PUT', 'DELETE']}))
 app.get('/projeto/form',  (req, res) => {res.render('formView')})
 
 app.put('/projeto/atualizar', (req, res) => {
-	res.render('mensagens', {nome: req.body.nome, cpf:req.body.cpf})})
+	res.render('mensagens', {req.body.nome, req.body.cpf})})
 
   
 app.listen(3000, () =>{//testando
